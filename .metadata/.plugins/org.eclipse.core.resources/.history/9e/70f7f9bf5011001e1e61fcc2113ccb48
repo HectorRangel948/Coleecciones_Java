@@ -1,0 +1,26 @@
+package colecciones;
+
+import java.util.Set; //papá
+import java.util.HashSet; //Hijo
+
+public class Colecciones {
+	public static void main(String[] args) {
+		System.out.println("hola mundo");
+	}
+
+
+
+/*
+ * Colecciones
+ * 
+ * -Arrays
+ * 
+ * Un array es una estructura de datos linea que contiene elementos del mismo tipo. Los elementos están almacenados de forma contigua en memoria, y se puede acceder a ellos a través de un índice. Sus principales características son:
+ * 1.-Tamaño fijo
+ * 2.-Acceso rápido
+ * 3.-Coste elevado para insertar o eliminar elmentos. 
+ * 
+ * 
+ * */
+	
+}

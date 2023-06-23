@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+A:\Bootcamp\Generation\Programación\Java\Ejercicios y proyectos\Colecciones\.metadata\.plugins\org.eclipse.jdt.core
+3413725848.index
+3652461282.index
+1865797976.index
