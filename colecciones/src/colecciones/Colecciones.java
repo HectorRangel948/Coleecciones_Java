@@ -1,6 +1,12 @@
 package colecciones;
 
 import java.util.Set; //papá
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.Map;
+import java.util.HashMap;
+
 import java.util.HashSet; //Hijo
 
 public class Colecciones {
@@ -42,10 +48,91 @@ public class Colecciones {
 		for(String habitacionTemporal : habitaciones) {
 			System.out.println("");
 		}
+	
+
+//ArrayList
+	
+	//Uso la interface List que almacena contactos (objetos), se llama listaDeContactos e instancia un arrayList para manejar los mismos tipos de datos (Contacto)
+	List<Cliente> listaDeClientes = new ArrayList<>();
+	
+	//Primero instancio un objeto de la clase Cliente(nombre, cuenta, saldo, nip)
+	
+	//Primera forma: Primero crear mis objetos y luego agregarlos
+	//Segunda forma: Hacer lo mismo que la primera pero en una línea
+	
+Cliente Felipe = new Cliente("Felipe Maqueda", "ACB123", 156.12f, "1234");
+	
+	//Agrego el cliente a mi lista de clientes con el método .add
+	
+	listaDeClientes.add(Felipe);
+	
+	listaDeClientes.add(new Cliente("Naruto", "XXX1111", 100.0f, "000"));
+	
+	System.out.println("Lista completa");
+	//Imprimo la información de mi lista (utiliza métodos)
+	System.out.println(listaDeClientes);
+	
+	System.out.println();
+	//Sacar un elemento de la lista y asignarlo a una variable
+	System.out.println("Elemento en el índice 0:");
+	Cliente datoDeLaLista = listaDeClientes.get(0);
+	
+	System.out.println();
+	//Imprimir el elemento de la lista con un dato específico
+	System.out.println(datoDeLaLista.getCuentaBancaria());
+	System.out.println(datoDeLaLista);
+	
+	System.out.println();
+	//Eliminar elementos de la lista
+	listaDeClientes.remove(0);
+	
+	System.out.println();
+	//Imprimo la información de mi lista (utilizar métodos)
+	System.out.println(listaDeClientes);
+	
+	//Conjunto para servicios de un hotel
+	Set<String> roomService = new HashSet<>();
+	
+	//Agregamos elementos a nuestro hashSet
+	roomService.add("Chilaquiles");
+	roomService.add("Agua mineral");
+	roomService.add("Wi-Fi");
+	
+	//Hotel con promoción (si pidieron agua mineral aplicamos un descuento del 50%)
+	if(roomService.contains("Agua mineral")) {
+		System.out.println("Obtienes un descuento del 50%");
 	}
-
-
-
+	
+	//Que pasa si imprimo mi roomService
+	System.out.println(roomService);
+	
+	//Borramos toda la lita de roomService
+	roomService.clear();
+	
+	System.out.println(roomService);
+	
+	
+	
+	//HashMap para mi sistema de reservas del hotel
+	Map<String, Cliente> reservaHabitacion = new HashMap<>();
+	
+	reservaHabitacion.put("101", new Cliente("Jesus", "135JJJ", 1552.58f, "04254"));
+	reservaHabitacion.put("102", new Cliente("Bugs Bunny", "BGSBNY111", 15254.45f, "7777"));
+	
+	//Impresión de una reserva
+	Cliente reservaBugsBunny = reservaHabitacion.get("102");
+	
+	//Qué pasa si imprimo la variable resevaHabitacion
+	System.out.println(reservaHabitacion);
+	
+	} //Cierre main
+}//Cierre class
+	
+	
+	
+	
+	
+	
 /*
  * Colecciones
  * 
@@ -57,6 +144,25 @@ public class Colecciones {
  * 3.-Coste elevado para insertar o eliminar elmentos. 
  * 
  * 
+ * 
+ * Set 
+ * Es una estructura de datos que almacenan elementos unicos sin orden específico. Las principales características de un set son 
+ * 
+ * 1.- No hay elementos duplicados
+ * 2.- No hay un orden específico
+ * 3.- La búsqueda es más rápido (key-value)
+ * 
+ * 
+ * 
+ * HashMap
+ * 
+ * Es una implementación de la interfaz Map de Java, que permite que la información se almacene en pares clave-valor. Sus principales características son:
+ * 
+ * 1.- Almacenamiento K y V
+ * 2.- Sin orden específico
+ * 3.- Búsqueda rápida
+ * 4.- Iteración rápida (for each)
+ * 5.- No sincronizado (hilos)
+ * 
  * */
 	
-}
